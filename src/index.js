@@ -36,4 +36,9 @@ document.getElementById('root')
 );
 
 
+<<<<<<< HEAD
+//changes from feature branch
+// //changes from feature branch1
+=======
 // some changes
+>>>>>>> 4fc5e3d87fc17147399d1b7025cd4591ed05aa24
