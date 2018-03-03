@@ -1,44 +1,46 @@
-import './main.css'
+import "./main.css";
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {createStore, applyMiddleware} from 'redux'
-import {composeWithDevTools} from 'redux-devtools-extension'
-import thunk from 'redux-thunk'
-import {syncHistoryWithStore} from 'react-router-redux'
-import {Router, Route, browserHistory} from 'react-router'
-import {Provider} from 'react-redux'
+import React from "react";
+import ReactDOM from "react-dom";
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import thunk from "redux-thunk";
+import { syncHistoryWithStore } from "react-router-redux";
+import { Router, Route, browserHistory } from "react-router";
+import { Provider } from "react-redux";
 
-import reducers from './reducers'
-import Layout from './containers/layout'
-import Phones from './containers/phones'
-import Phone from './containers/phone'
-import Basket from './containers/basket'
+import reducers from "./reducers";
+import Layout from "./containers/layout";
+import Phones from "./containers/phones";
+import Phone from "./containers/phone";
+import Basket from "./containers/basket";
 
-const store = createStore(reducers, composeWithDevTools(
-	applyMiddleware(thunk)
-))
-
-const history = syncHistoryWithStore(browserHistory, store)
-
-ReactDOM.render(
-<Provider store={store}>
-	<Router history={history}>
-		<Route component={Layout}>
-			<Route path={`${process.env.PUBLIC_URL}/`} component={Phones} />
-			<Route path={`${process.env.PUBLIC_URL}/categories/:id`} component={Phones} />
-		</Route>
-		<Route path={`${process.env.PUBLIC_URL}/phones/:id`} component={Phone} />
-		<Route path={`${process.env.PUBLIC_URL}/basket`} component={Basket} />
-	</Router>
-</Provider>,
-document.getElementById('root')
+const store = createStore(
+  reducers,
+  composeWithDevTools(applyMiddleware(thunk))
 );
 
+const history = syncHistoryWithStore(browserHistory, store);
 
-<<<<<<< HEAD
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={history}>
+      <Route component={Layout}>
+        <Route path={`${process.env.PUBLIC_URL}/`} component={Phones} />
+        <Route
+          path={`${process.env.PUBLIC_URL}/categories/:id`}
+          component={Phones}
+        />
+      </Route>
+      <Route path={`${process.env.PUBLIC_URL}/phones/:id`} component={Phone} />
+      <Route path={`${process.env.PUBLIC_URL}/basket`} component={Basket} />
+    </Router>
+  </Provider>,
+  document.getElementById("root")
+);
+
 //changes from feature branch
 // //changes from feature branch1
-=======
 // some changes
->>>>>>> 4fc5e3d87fc17147399d1b7025cd4591ed05aa24
+
+// master1
