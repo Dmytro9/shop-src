@@ -38,10 +38,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
-
-//changes from feature branch
-// //changes from feature branch1
-// some changes
-
-// master1
-// master2
