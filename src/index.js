@@ -40,7 +40,3 @@ ReactDOM.render(
 );
 
 //master
-//master2
-//master3
-
-///baz
